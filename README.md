@@ -1,5 +1,5 @@
 # Adding Data Persistence Sprint Challenge
-# Xaver Pinero
+# Xaver Pinero is trying a lot harder now.
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
