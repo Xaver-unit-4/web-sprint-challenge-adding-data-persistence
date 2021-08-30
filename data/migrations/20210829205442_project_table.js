@@ -32,11 +32,15 @@ exports.up = function(knex) {
         .onUpdate('CASCADE')
         .onDelete('CASCADE')
     })
-    .createTable('resource assignment', tbl => {
-      tbl.integer('project_resources')
-        .unsigned()
-        .notNullable()
-        .references('project_id')
+    .createTable('resource_assignment', tbl => {
+      tbl.increments('project_resources');
+      tbl.foreign('project_name')
+        .references('project_name')
+        .inTable('project')
+        .onUpdate('CASCADE')
+        .onDelete('CASCADE')
+      tbl.foreign('resource_name')
+        .references('resource_name')
         .inTable('project')
         .onUpdate('CASCADE')
         .onDelete('CASCADE')
@@ -44,5 +48,8 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  
+  return knex.schema
+    .dropTableIfExists('resource assignment')
+    .dropTableIfExists('task')
+    .dropTableIfExists('project');
 };
