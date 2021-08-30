@@ -3,7 +3,7 @@ const express = require('express')
 const Resource = require('./model')
 const router = express.Router()
 
-router.get('resources', (req, res, next) => {
+router.get('/resource', (req, res, next) => {
   Resource.getAll()
     .then(resource => {
       res.json(resource)
@@ -11,7 +11,7 @@ router.get('resources', (req, res, next) => {
     .catch(next)
 })
 
-router.post('resources', (req, res, next) => {
+router.post('/resource', (req, res, next) => {
   const resource = req.body
 
   Resource.add(resource)

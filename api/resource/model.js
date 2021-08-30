@@ -2,7 +2,7 @@
 const db = require('../../data/dbConfig')
 function getAll() {
   return db('resource')
-    .select('rs.*')
+    .select('resource.*')
 }
 
 function add(resource) {

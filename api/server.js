@@ -7,6 +7,6 @@ const server = express();
 
 server.use(express.json());
 
-server.use('/api/');
+server.use('/api');
 
 module.exports = server;
