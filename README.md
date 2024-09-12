@@ -1,4 +1,5 @@
 # Adding Data Persistence Sprint Challenge
+# Xaver Pinero is trying a lot harder now.
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
@@ -68,10 +69,10 @@ Build the migration(s) in Knex inside the `data/migrations` folder using appropr
 
 Build an API inside the `api` folder with endpoints for:
 
-- [ ] `[POST] /api/resources`
+- [x ] `[POST] /api/resources`
   - Example of response body: `{"resource_id":1,"resource_name":"foo","resource_description":null}`
 
-- [ ] `[GET] /api/resources`
+- [ x] `[GET] /api/resources`
   - Example of response body: `[{"resource_id":1,"resource_name":"foo","resource_description":null}]`
 
 - [ ] `[POST] /api/projects`
